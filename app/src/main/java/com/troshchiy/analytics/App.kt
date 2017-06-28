@@ -14,18 +14,16 @@ class App : Application() {
 
     init {
         APP = this
-        analytics = GoogleAnalytics.getInstance(this)
     }
 
     override fun onCreate() {
         super.onCreate()
+        analytics = GoogleAnalytics.getInstance(this)
     }
 
     @Synchronized fun getDefaultTracker(): Tracker? {
         // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
-        if (tracker == null) {
-            tracker = analytics.newTracker(R.xml.global_tracker)
-        }
+        if (tracker == null) tracker = analytics.newTracker(R.xml.global_tracker)
 
         return tracker
     }
