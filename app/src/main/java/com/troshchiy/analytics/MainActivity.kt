@@ -16,8 +16,8 @@ class MainActivity : AppCompatActivity() {
         tracker?.send(HitBuilders.ScreenViewBuilder().build())
 
         tracker?.send(HitBuilders.EventBuilder()
-                .setCategory("Action")
-                .setAction("Share")
+                .setCategory("Category")
+                .setAction("Action")
                 .build())
     }
 }
