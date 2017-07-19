@@ -8,8 +8,7 @@ class App : Application() {
 
     companion object {
         lateinit var APP: App
-        lateinit var analytics: GoogleAnalytics
-        private var tracker: Tracker? = null
+        lateinit var tracker: Tracker
     }
 
     init {
@@ -18,13 +17,6 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        analytics = GoogleAnalytics.getInstance(this)
-    }
-
-    @Synchronized fun getDefaultTracker(): Tracker? {
-        // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
-        if (tracker == null) tracker = analytics.newTracker(R.xml.global_tracker)
-
-        return tracker
+        tracker = GoogleAnalytics.getInstance(this).newTracker(R.xml.global_tracker)
     }
 }
