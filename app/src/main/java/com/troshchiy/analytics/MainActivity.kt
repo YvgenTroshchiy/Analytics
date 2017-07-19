@@ -12,9 +12,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn_a.setOnClickListener { }
-        btn_b.setOnClickListener { }
-        btn_c.setOnClickListener { }
+        btn_a.setOnClickListener { sendAnalyticsEvent("A") }
+        btn_b.setOnClickListener { sendAnalyticsEvent("B") }
+        btn_c.setOnClickListener { sendAnalyticsEvent("C") }
 
         sendAnalyticsData()
     }
@@ -22,10 +22,12 @@ class MainActivity : AppCompatActivity() {
     private fun sendAnalyticsData() {
         App.tracker.setScreenName("MainActivity Screen")
         App.tracker.send(HitBuilders.ScreenViewBuilder().build())
+    }
 
+    private fun sendAnalyticsEvent(name: String) {
         App.tracker.send(HitBuilders.EventBuilder()
                 .setCategory("Category")
-                .setAction("Action")
+                .setAction(name)
                 .build())
     }
 }
