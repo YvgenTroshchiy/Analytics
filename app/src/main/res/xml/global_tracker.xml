@@ -4,6 +4,6 @@
     <string name="ga_trackingId" translatable="false">REPLACE_ME</string>
     <bool name="ga_autoActivityTracking">true</bool>
 
-    <screenName name="com.tickengo.rider.ui.SplashActivity">Splash</screenName>
+    <screenName name="com.troshchiy.analytics.MainActivity">Main Activity</screenName>
 
 </resources>
