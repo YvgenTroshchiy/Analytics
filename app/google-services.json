@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "777975228102-to2kql8um05ucrs8qctm1s3n70471iv4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.troshchiy.analytics",
+            "certificate_hash": "e402ae4865128eddf7f4788473dc8907d6376c63"
+          }
+        },
+        {
           "client_id": "777975228102-vngjpehq7o2uhcn8k6o983hv3qiqjqiq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
