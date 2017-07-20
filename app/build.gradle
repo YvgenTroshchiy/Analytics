@@ -10,9 +10,23 @@ android {
         applicationId "com.troshchiy.analytics"
         minSdkVersion 21
         targetSdkVersion 26
+
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        debug {
+            storeFile file("debug.keystore")
+        }
+        // Stub part fo future release keystore
+        release {
+            storeFile file('storeFile.jks')
+            keyAlias 'keyAlias'
+            storePassword 'storePassword'
+            keyPassword 'keyPassword'
+        }
     }
     buildTypes {
         release {
