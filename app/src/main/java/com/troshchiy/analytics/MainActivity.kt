@@ -15,13 +15,6 @@ class MainActivity : AppCompatActivity() {
         btn_a.setOnClickListener { sendAnalyticsEvent("A") }
         btn_b.setOnClickListener { sendAnalyticsEvent("B") }
         btn_c.setOnClickListener { sendAnalyticsEvent("C") }
-
-        sendAnalyticsData()
-    }
-
-    private fun sendAnalyticsData() {
-        App.tracker.setScreenName("MainActivity Screen")
-        App.tracker.send(HitBuilders.ScreenViewBuilder().build())
     }
 
     private fun sendAnalyticsEvent(name: String) {
@@ -29,5 +22,15 @@ class MainActivity : AppCompatActivity() {
                 .setCategory("Category")
                 .setAction(name)
                 .build())
+    }
+
+    override fun onResume() {
+        super.onResume()
+        sendAnalyticsData()
+    }
+
+    private fun sendAnalyticsData() {
+        App.tracker.setScreenName("MainActivity Screen")
+        App.tracker.send(HitBuilders.ScreenViewBuilder().build())
     }
 }
