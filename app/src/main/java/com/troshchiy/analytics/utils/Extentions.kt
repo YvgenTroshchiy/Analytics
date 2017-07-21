@@ -13,5 +13,5 @@ fun sendFirebaseAction(name: String) {
 fun sendScreenFirebaseEvent(name: String) {
     val params = Bundle()
     params.putString("name", name)
-    FirebaseAnalytics.getInstance(App.APP).logEvent("screen_view", params)
+    FirebaseAnalytics.getInstance(App.APP).logEvent("screen", params)
 }
