@@ -4,13 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#a35f5f">
+    android:background="#76b377">
 
     <Button
-        android:id="@+id/btn_openSecondActivity"
+        android:id="@+id/btn_completeFunnel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Open Second Activity"
+        android:text="Complete Funnel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

@@ -8,7 +8,7 @@
 
     <!-- Map -->
     <fragment
-        android:id="@+id/map"
+        android:id="@+id/firstFragment"
         android:name="com.troshchiy.analytics.FirstFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
