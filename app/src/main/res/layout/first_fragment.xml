@@ -7,13 +7,25 @@
     android:background="#a35f5f">
 
     <Button
+        android:id="@+id/btn_openSearchActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Open Search Activity"
+        app:layout_constraintBottom_toTopOf="@+id/btn_openSecondActivity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
         android:id="@+id/btn_openSecondActivity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Open Second Activity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_openSearchActivity" />
 
 </android.support.constraint.ConstraintLayout>

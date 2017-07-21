@@ -10,10 +10,10 @@ import org.jetbrains.anko.startActivity
 class FirstFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        setCurrentScreen(activity, "FirstFragment")
+
         val view = inflater?.inflate(R.layout.first_fragment, container, false)
-
-        setCurrentScreen(activity, this.javaClass.simpleName)
-
+        view?.findViewById(R.id.btn_openSearchActivity)?.setOnClickListener { startActivity<SearchActivity>() }
         view?.findViewById(R.id.btn_openSecondActivity)?.setOnClickListener { startActivity<SecondActivity>() }
         return view
     }
