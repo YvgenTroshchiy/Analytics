@@ -12,6 +12,10 @@ class App : Application() {
 
     init {
         APP = this
+    }
+
+    override fun onCreate() {
+        super.onCreate()
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
     }
 }
