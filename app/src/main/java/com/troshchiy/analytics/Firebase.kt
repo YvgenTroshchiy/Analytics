@@ -8,10 +8,10 @@ enum class CompleteFunnelEvents { MainActivity, FirstActivity, SecondActivity, C
 fun setCurrentScreen(activity: Activity, screenName: String) =
         App.firebaseAnalytics.setCurrentScreen(activity, screenName, null /* class override */)
 
-fun logFirebaseEvent(eventName: CompleteFunnelEvents, key: String = "", value: String = "") =
+fun logFirebaseEvent(eventName: CompleteFunnelEvents, key: String = "name", value: String = "") =
         logFirebaseEvent(eventName.name, key, value)
 
-fun logFirebaseEvent(eventName: String, key: String = "", value: String = "") {
+fun logFirebaseEvent(eventName: String, key: String = "name", value: String = "") {
     val params = Bundle()
     params.putString(key, value)
     App.firebaseAnalytics.logEvent(eventName, params)
