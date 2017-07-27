@@ -5,7 +5,7 @@ import android.os.Bundle
 
 enum class CompleteFunnelEvents { MainActivity, FirstActivity, SecondActivity, CompleteFunnel }
 
-fun setCurrentScreen(activity: Activity, screenName: String) =
+fun logScreenInFirebase(activity: Activity, screenName: String) =
         App.firebaseAnalytics.setCurrentScreen(activity, screenName, null /* class override */)
 
 fun logFirebaseEvent(eventName: CompleteFunnelEvents, key: String = "name", value: String = "") =
